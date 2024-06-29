@@ -2,30 +2,44 @@
 
 import { NextArrow } from '@/components/widgets/next-arrow';
 import { PrevArrow } from '@/components/widgets/prev-arrow';
+import { Skeleton } from '@/components/widgets/skeleton';
 import { SliderItem } from '@/components/widgets/slider-item';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [itemActive, setitemActive] = useState<number>(1);
+  const [itemActive, setItemActive] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const countItems = 6;
 
   const onPrev = () => {
-    setitemActive(itemActive - 1)
-    if(itemActive === 1){
-      setitemActive(countItems)
-    }
-  }
+    setItemActive((prev) => (prev === 1 ? countItems : prev - 1));
+  };
 
-  const onNext = () =>{
-    setitemActive(itemActive + 1)
-    if(itemActive >= countItems){
-      setitemActive(1)
-    }
+  const onNext = () => {
+    setItemActive((prev) => (prev >= countItems ? 1 : prev + 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(onNext, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Simular una carga de datos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 segundos de carga simulada
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Skeleton />;
   }
 
   return (
     <div>
+      {/* SLIDERS */}
       <div className="h-[20vh] relative shadow-md shadow-gray-400 rounded-b-lg sm:h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[60vh] 2xl:h-[70vh]">
         <ul>
           <Link href="https://tuboleta.com/eventos/detalle/willy-garcia-30-exitos-en-vivo-buenaventura/395470055410">
@@ -74,6 +88,7 @@ export default function Home() {
         <PrevArrow onClickPrev={() => onPrev()} />
         <NextArrow onClickNext={() => onNext()} />
       </div>
+      {/*  FIN DEL SLIDERS */}
       {/*       <div className="mt-8 p-4 sm:p-8 md:p-12 lg:p-16">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">Hola todo el MUNDO</h1>
         <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-justify"></p> */}
