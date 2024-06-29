@@ -1,17 +1,10 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
-import {
-  Dialog,
-  DialogPanel,
-  PopoverGroup,
-} from '@headlessui/react';
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
-import Logo from '@/components/widgets/logo';
+import { Dialog, DialogPanel, PopoverGroup } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Logo from '@/ui/logo';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -40,7 +33,8 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Link href="/"
+          <Link
+            href="/"
             className="relative text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-full before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-full"
           >
             Inicio

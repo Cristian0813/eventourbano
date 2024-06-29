@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
-import Footer from '@/components/footer/page';
-import Header from '@/components/widgets/header';
+import '@/style/globals.css';
+import Header from '@/components/header/header';
+import Footer from '@/components/footer/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning={true}>
       <body className={`bg-gray-100 text-black ${inter.className}`}>
-      <Header />
+        <Header />
         {children}
         <Footer />
       </body>
