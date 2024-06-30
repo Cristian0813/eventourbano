@@ -40,13 +40,13 @@ export default function Header() {
             Inicio
           </Link>
           <Link
-            href="#"
+            href="/nosotros"
             className="relative hover:text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-full"
           >
             Nosotros
           </Link>
           <Link
-            href="#"
+            href="/contacto"
             className="relative hover:text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-full"
           >
             Contacto
@@ -75,19 +75,19 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Link
-                  href="#"
+                  href="/"
                   className="block relative text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-9 before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-9"
                 >
                   Inicio
                 </Link>
                 <Link
-                  href="#"
+                  href="/nosotros"
                   className="block relative hover:text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-20"
                 >
                   Nosotros
                 </Link>
                 <Link
-                  href="#"
+                  href="/contacto"
                   className="block relative hover:text-slate-700 transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-slate-700 before:rounded-full before:transition-all before:duration-300 hover:before:w-20"
                 >
                   Contacto

@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton } from '@/components/slider/skeleton-slider';
+import { Skeleton } from '@/components/skeleton/skeleton-slider';
 import { useState, useEffect } from 'react';
 import { UseSlider } from '@/components/hook/usesleider';
 

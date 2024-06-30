@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Nosotros() {
   return (
     <div className="p-4 space-y-8">

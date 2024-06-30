@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="py-2 lg:py-2 border-t border-black-900 bg-amber-50">
+    <footer className="py-2 lg:py-2 border-t border-black-900 bg-amber-50 mt-24">
       <div className="w-[96%] max-w-7xl mx-auto">
         <div className="border-b border-black-900 lg:pb-2 flex lg:justify-center lg:flex-col lg:items-center">
           <div className="space-y-2 pb-2 border-b border-black-900 lg:pb-0 lg:border-none w-full flex flex-col items-center">

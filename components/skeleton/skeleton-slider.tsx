@@ -21,12 +21,6 @@ export const Skeleton = () => {
           <div className="w-8 h-8 bg-gray-500 rounded"></div>
         </div>
       </div>
-      <div className="mt-8 p-4 sm:p-8 md:p-12 lg:p-16">
-        <h1 className="h-8 bg-gray-400 rounded"></h1>
-        <p className="mt-4 h-4 bg-gray-400 rounded w-3/4"></p>
-        <p className="mt-2 h-4 bg-gray-400 rounded w-2/4"></p>
-        <p className="mt-2 h-4 bg-gray-400 rounded w-1/4"></p>
-      </div>
     </div>
   );
 };

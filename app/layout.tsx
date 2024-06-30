@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/style/globals.css';
 import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
+import Footer from '@/components/footer/page';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
-      <body className={`bg-gray-100 text-black ${inter.className}`}>
+      <body
+        className={`bg-gray-100 text-black ${inter.className}`}
+      >
         <Header />
         {children}
         <Footer />
