@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Skeleton = () => {
+export const SkeletonSlider = () => {
   return (
     <div className="animate-pulse">
       <div className="h-[20vh] relative shadow-md shadow-gray-400 rounded-b-lg sm:h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[60vh] 2xl:h-[70vh] bg-gray-300">
