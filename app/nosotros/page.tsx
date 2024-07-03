@@ -3,7 +3,7 @@ import React from 'react'
 export default function Nosotros() {
   return (
     <div className="p-4 space-y-8">
-      <div className="bg-white p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="md:w-1/2">
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
             SOBRE NOSOTROS
@@ -18,7 +18,7 @@ export default function Nosotros() {
           </p>
         </div>
       </div>
-      <div className="bg-white p-4 rounded shadow-md flex flex-col md:items-center md:justify-between md:flex-row-reverse">
+      <div className="p-4 rounded shadow-md flex flex-col md:items-center md:justify-between md:flex-row-reverse">
         <div className="md:w-1/2">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">
             Nuestra Misión
@@ -34,7 +34,7 @@ export default function Nosotros() {
           </p>
         </div>
       </div>
-      <div className="bg-white p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="md:w-1/2">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">
             Nuestra Visión
@@ -49,7 +49,7 @@ export default function Nosotros() {
           </p>
         </div>
       </div>
-      <div className="bg-white p-4 rounded shadow-md flex flex-colmd:items-center md:justify-between md:flex-row-reverse">
+      <div className="p-4 rounded shadow-md flex flex-colmd:items-center md:justify-between md:flex-row-reverse">
         <div className="md:w-1/2">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">
             ¿Qué Ofrecemos?
@@ -68,7 +68,7 @@ export default function Nosotros() {
           </p>
         </div>
       </div>
-      <div className="bg-white p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="p-4 rounded shadow-md flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="md:w-1/2">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">
             Nuestro Equipo

@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio el Atanasio Girardot',
       ciudad: 'Medellín',
       url: 'https://tuticket.com.co/events/las-leyendas-de-la-salsa-medellin',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Nemesio Camacho El Campín',
       ciudad: 'Bogotá',
       url: 'https://tuticket.com.co/events/rock-pop',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Nemesio Camacho El Campín',
       ciudad: 'Bogotá',
       url: 'https://tuticket.com.co/events/las-leyendas-de-la-salsa-bogota',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Coliseo Elías Chegwin',
       ciudad: 'Barranquilla',
       url: 'https://www.tuboleta.com/eventos/detalle/titanes-vs-bucaros-2024-1/364527949320',
-      evento: 'Deportes',
+      categoria: 'Deportes',
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Romelio Martínez',
       ciudad: 'Barranquilla',
       url: 'https://portal.tuboleta.com/vive-la-salsa-2024-barranquilla/',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Metropolitano Roberto Meléndez',
       ciudad: 'Barranquilla',
       url: 'https://portal.tuboleta.com/junior-de-barranquilla/',
-      evento: 'Deportes',
+      categoria: 'Deportes',
     },
     {
       id: 7,
@@ -75,7 +75,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Puerta de Oro',
       ciudad: 'Barranquilla',
       url: 'https://www.tuboleta.com/images/Eventos/el-cantante-del-ghetto-tour-ryan-castro/barranquilla.html',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 8,
@@ -85,7 +85,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Puerta de Oro - Explanada',
       ciudad: 'Barranquilla',
       url: 'https://portal.tuboleta.com/kany-garcia/barranquilla/',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 9,
@@ -95,7 +95,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Fábrica de Cultura',
       ciudad: 'Barranquilla',
       url: 'https://portal.tuboleta.com/encuentro-afe/',
-      evento: 'Foros',
+      categoria: 'Foros',
     },
     {
       id: 10,
@@ -104,7 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Parque Caribe Aventura',
       ciudad: 'Barranquilla',
       url: 'https://www.tuboleta.com/eventos/detalle/parque-caribe-aventura/2967396004',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
     {
       id: 11,
@@ -113,7 +113,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Museo del Carnaval',
       ciudad: 'Barranquilla',
       url: 'https://www.tuboleta.com/eventos/detalle/museo-del-carnaval%0D%0A/10476786008',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
     {
       id: 12,
@@ -123,7 +123,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Autódromo de Tocancipá',
       ciudad: 'Tocancipá',
       url: 'https://www.tuboleta.com/eventos/detalle/gran-premio-mobil-delvac-edicion-36/8121200231',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
     {
       id: 13,
@@ -133,7 +133,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Museo de Arte',
       ciudad: 'Pereira',
       url: 'https://www.tuboleta.com/eventos/detalle/gordo-y-feo-pereira/588360445929',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 14,
@@ -142,7 +142,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Guillermo Plazas AlcId',
       ciudad: 'Neiva',
       url: 'https://www.tuboleta.com/eventos/detalle/abonos-huila-2024-2/616180576406',
-      evento: 'Deportes',
+      categoria: 'Deportes',
     },
     {
       id: 15,
@@ -152,7 +152,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Jardín Botanico',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/pride-fest-2024/2128854460',
-      evento: 'Festival',
+      categoria: 'Festival',
     },
     {
       id: 16,
@@ -162,7 +162,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro UniversIdad de Medellín',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/show-1995-medellin/225662010622',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 17,
@@ -172,7 +172,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Fonda Discoteca Tutaina',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/peguese-la-rodadita-medellin/846549008998',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 18,
@@ -182,7 +182,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Skycenter Centro de Eventos',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/rawayana-quien-trae-las-cornetas/8069732190',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 19,
@@ -192,7 +192,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/luli-pampin-bienvenidos-medellin/812989531747',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 20,
@@ -203,7 +203,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/do-re-mingo-favorito-rjuguemos-con-la.orquesta/178954817579',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 21,
@@ -213,7 +213,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Fonda Discoteca Tutaina',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/denme-una-mano-medellin/721501131760',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 22,
@@ -223,7 +223,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro El Tesoro',
       ciudad: 'Medellín',
       url: 'https://portal.tuboleta.com/teatro-el-tesoro/',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 23,
@@ -233,7 +233,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Estadio Atanasio Girardot',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/images/Eventos/Morat-medellin-2024/index.html',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 24,
@@ -243,7 +243,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://tuboleta.com/imagenes/6672f79b742e7.png',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
     {
       id: 25,
@@ -253,7 +253,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/la-hoguera/652580573629',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 26,
@@ -263,7 +263,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Fonda Discoteca Tutaina',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/blanco-y-negro-medellin/657684957371',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 27,
@@ -273,7 +273,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/tosca-opera-de-giacomo-puccini/7688829215',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 28,
@@ -283,7 +283,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Fonda Discoteca Tutaina',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/moneno-medellin/189154325516',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 29,
@@ -293,7 +293,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/jose-matera-y-estelares-en-medellin/7017094210',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 30,
@@ -303,7 +303,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro El Tesoro',
       ciudad: 'Medellín',
       url: 'https://portal.tuboleta.com/teatro-el-tesoro/',
-      evento: 'Concierto',
+      categoria: 'Concierto',
     },
     {
       id: 31,
@@ -313,7 +313,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'The Church',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/juan-duque-qmpev-tour-medellin/501071001834',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 32,
@@ -323,7 +323,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/bandas-sonoras-2.0/1968090755',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 33,
@@ -333,7 +333,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/DEM-tragedia-futurista/185906150748',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 34,
@@ -344,7 +344,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/Temporada-Internacional-de-Musica-Clasica-Pablo-Sainz-Villegas/817876289896',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 35,
@@ -354,7 +354,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro El Tesoro',
       ciudad: 'Medellín',
       url: 'https://portal.tuboleta.com/teatro-el-tesoro/',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 36,
@@ -364,7 +364,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro UniversIdad de Medellín',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/epic-2024-medellin-segunda-funcion/877714725879',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 37,
@@ -374,7 +374,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/opera-carmen/7858420969',
-      evento: 'Teatro',
+      categoria: 'Teatro',
     },
     {
       id: 38,
@@ -385,7 +385,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro de la UniversIdad de Medellín',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/alberto-plaza-tour-yo-te-seguire-colombia-medellin-segunda-fecha/378125138790',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
     {
       id: 39,
@@ -396,7 +396,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/Temporada-Internacional-de-Musica-Clasica-Pablo-Anna-Geniushene/962679079121',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 40,
@@ -406,7 +406,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Ciudad Hall El Rodeo',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/paul-van-dyk-medellin/459342494756',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 41,
@@ -417,7 +417,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/Temporada-Internacional-de-Musica-Clasica-Latsos-Piano-Duo/844023688870',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 42,
@@ -427,7 +427,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/kiss-guns-and-roses-def-leppard-sinfonico/7423379111',
-      evento: 'Concierto',
+      categoria: 'Concierto',
     },
     {
       id: 43,
@@ -437,7 +437,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro de la UniversIdad de Medellín',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/magic-medellin/823681440496',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 44,
@@ -448,7 +448,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/Temporada-Internacional-de-Musica-Clasica-trio-guarneri-de-praga/622529349577',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 45,
@@ -458,7 +458,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Parque Norte',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/images/Eventos/Ritvales-2024/home.html',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 46,
@@ -468,7 +468,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Metropolitano José Gutiérrez Gómez',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/tributo-sinfonico-guns-n-roses-y-metallica/342624153634',
-      evento: 'Conciertos',
+      categoria: 'Conciertos',
     },
     {
       id: 47,
@@ -477,7 +477,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Gran Domo - Plaza Palmas',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/la-selva-colombia/1829475769',
-      evento: 'Familia',
+      categoria: 'Familia',
     },
   ];
   res.status(200).json(eventos);
