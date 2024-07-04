@@ -1,60 +1,60 @@
-import { useEffect, useState, useMemo } from 'react';
+// useFetchCategoria.tsx
+import { useEffect, useState } from 'react';
 
 interface Evento {
   id: number;
   nombre: string;
+  imagen: string;
+  fecha?: string;
+  lugar: string;
   ciudad: string;
+  url: string;
   categoria: string;
 }
 
-interface UseFetchCategoriaParams {
-  ciudad?: string;
-  nombre?: string;
-  categoria?: string;
-}
-
-interface UseFetchCategoriaResult {
-  eventos: Evento[];
-  ciudades: string[];
-  categorias: string[];
-}
-
-export const useFetchCategoria = (params: UseFetchCategoriaParams) => {
-  const [result, setResult] = useState<UseFetchCategoriaResult>({
-    eventos: [],
-    ciudades: [],
-    categorias: [],
-  });
-
-  const paramsMemo = useMemo(
-    () => ({ ...params }),
-    [params.ciudad, params.nombre, params.categoria]
-  );
+export const useFetchCategoria = (search: string) => {
+  const [categorias, setCategorias] = useState<Evento[]>([]);
+  const [filteredCategorias, setFilteredCategorias] = useState<Evento[]>([]);
+  const [ciudades, setCiudades] = useState<string[]>([]);
+  const [categoriasUnicas, setCategoriasUnicas] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchCategorias = async () => {
       try {
-        const queryParams = new URLSearchParams(paramsMemo as any).toString();
-        const response = await fetch(`/api/eventos?${queryParams}`);
+        const response = await fetch('/api/eventos');
         if (!response.ok) {
-          throw new Error('Error al obtener los eventos');
+          throw new Error('Error al obtener las categorías');
         }
         const data: Evento[] = await response.json();
+        setCategorias(data);
 
-        const ciudades = Array.from(
-          new Set(data.map((evento) => evento.ciudad))
+        // Obtener listas únicas de ciudades y categorías
+        const uniqueCiudades = Array.from(
+          new Set<string>(data.map((evento) => evento.ciudad))
         );
-        const categorias = Array.from(
-          new Set(data.map((evento) => evento.categoria))
+        const uniqueCategorias = Array.from(
+          new Set<string>(data.map((evento) => evento.categoria))
         );
 
-        setResult({ eventos: data, ciudades, categorias });
+        setCiudades(uniqueCiudades);
+        setCategoriasUnicas(uniqueCategorias);
       } catch (error) {
         console.error('Error fetching eventos:', error);
       }
     };
-    fetchCategorias();
-  }, [paramsMemo]);
 
-  return result;
+    fetchCategorias();
+  }, []);
+
+  useEffect(() => {
+    const filtered = categorias.filter(
+      (evento) =>
+        evento.nombre.toLowerCase().includes(search.toLowerCase()) ||
+        evento.ciudad.toLowerCase().includes(search.toLowerCase()) ||
+        evento.categoria.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredCategorias(filtered);
+  }, [search, categorias]);
+
+  return { filteredCategorias, ciudades, categoriasUnicas, categorias };
 };

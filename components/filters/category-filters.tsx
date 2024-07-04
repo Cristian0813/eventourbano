@@ -19,7 +19,35 @@ import { useFetchCategoria } from '@/hook/useFetchCategoria';
 
 export const CategoryFilters = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const { ciudades, categorias } = useFetchCategoria({});
+  const [search, setSearch] = useState('');
+  const { filteredCategorias, ciudades, categoriasUnicas } =
+    useFetchCategoria(search);
+  const [selectedCiudades, setSelectedCiudades] = useState<string[]>([]);
+  const [selectedCategorias, setSelectedCategorias] = useState<string[]>([]);
+
+  const handleCiudadChange = (ciudad: string) => {
+    setSelectedCiudades((prev) =>
+      prev.includes(ciudad)
+        ? prev.filter((c) => c !== ciudad)
+        : [...prev, ciudad]
+    );
+  };
+
+  const handleCategoriaChange = (categoria: string) => {
+    setSelectedCategorias((prev) =>
+      prev.includes(categoria)
+        ? prev.filter((c) => c !== categoria)
+        : [...prev, categoria]
+    );
+  };
+
+const filteredBySelection = filteredCategorias.filter(
+  (evento) =>
+    (selectedCiudades.length === 0 ||
+      selectedCiudades.includes(evento.ciudad)) &&
+    (selectedCategorias.length === 0 ||
+      selectedCategorias.includes(evento.categoria))
+);
 
   const filters = [
     {
@@ -28,16 +56,16 @@ export const CategoryFilters = () => {
       options: ciudades.map((ciudad) => ({
         value: ciudad,
         label: ciudad,
-        checked: false,
+        checked: selectedCiudades.includes(ciudad),
       })),
     },
     {
       id: 'categoria',
       name: 'Categoría',
-      options: categorias.map((categoria) => ({
+      options: categoriasUnicas.map((categoria) => ({
         value: categoria,
         label: categoria,
-        checked: false,
+        checked: selectedCategorias.includes(categoria),
       })),
     },
   ];
@@ -49,23 +77,16 @@ export const CategoryFilters = () => {
         <Dialog
           className="relative z-40 lg:hidden"
           open={mobileFiltersOpen}
-          onClose={setMobileFiltersOpen}
+          onClose={() => setMobileFiltersOpen(false)}
         >
-          <DialogBackdrop
-            transition
-            className="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
-          />
-
+          <DialogBackdrop className="fixed inset-0 bg-black bg-opacity-25" />
           <div className="fixed inset-0 z-40 flex">
-            <DialogPanel
-              transition
-              className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-gray-100 py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
-            >
+            <DialogPanel className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
               <div className="flex items-center justify-between px-4">
                 <h2 className="text-lg font-medium text-gray-900">Filtro</h2>
                 <button
                   type="button"
-                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md p-2  text-gray-400 hover:text-gray-950"
+                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500"
                   onClick={() => setMobileFiltersOpen(false)}
                 >
                   <span className="sr-only">Cerrar menu</span>
@@ -76,18 +97,20 @@ export const CategoryFilters = () => {
               {/* Filters */}
               <form className="mt-4 border-t border-gray-200">
                 <h3 className="sr-only">Categorias</h3>
-                <form className="mt-2 block px-2 py-3">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <div className="mt-2 block px-4 py-3">
+                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                     <input
                       type="text"
-                      name="username"
-                      id="username"
-                      autoComplete="username"
-                      className="block flex-1 border-0 rounded-md  py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 border-gray-900 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      name="search"
+                      id="search"
+                      autoComplete="off"
+                      className="block w-full flex-1 border-0 rounded-md py-1.5 pl-3 text-gray-900 placeholder-gray-500 focus:ring-0"
                       placeholder="Ciudad, Categoría, Evento"
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
                     />
                   </div>
-                </form>
+                </div>
 
                 {filters.map((section) => (
                   <Disclosure
@@ -98,7 +121,7 @@ export const CategoryFilters = () => {
                     {({ open }) => (
                       <>
                         <h3 className="-mx-2 -my-3 flow-root">
-                          <DisclosureButton className="flex w-full items-center justify-between  px-2 py-3 text-gray-400 hover:text-gray-500">
+                          <DisclosureButton className="flex w-full items-center justify-between px-2 py-3 text-gray-400 hover:text-gray-500">
                             <span className="font-medium text-gray-900">
                               {section.name}
                             </span>
@@ -129,7 +152,12 @@ export const CategoryFilters = () => {
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
                                   type="checkbox"
-                                  defaultChecked={option.checked}
+                                  checked={option.checked}
+                                  onChange={() =>
+                                    section.id === 'ciudad'
+                                      ? handleCiudadChange(option.value)
+                                      : handleCategoriaChange(option.value)
+                                  }
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
                                 <label
@@ -151,23 +179,19 @@ export const CategoryFilters = () => {
           </div>
         </Dialog>
 
-        {/* FILTRO DIALOGO */}
+        {/* Filters */}
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
               Eventos
             </h1>
-
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
-                <MenuItems
-                  transition
-                  className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md  shadow-2xl ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                ></MenuItems>
+                <MenuItems className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md shadow-2xl ring-1 ring-black ring-opacity-5"></MenuItems>
               </Menu>
               <button
                 type="button"
-                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-950 sm:ml-6 lg:hidden"
+                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 lg:hidden"
                 onClick={() => setMobileFiltersOpen(true)}
               >
                 <span className="sr-only">Filtro</span>
@@ -180,23 +204,22 @@ export const CategoryFilters = () => {
             <h2 id="products-heading" className="sr-only">
               Eventos
             </h2>
-
             <div className="grid grid-cols-1 gap-x-1 gap-y-2 lg:grid-cols-6">
               {/* Filters */}
               <form className="hidden lg:block">
                 <h3 className="sr-only">Categorias</h3>
-                <form className="mt-2 space-y-4 border-b border-gray-200 pb-6 text-sm font-medium">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <div className="mt-2 space-y-4 border-b border-gray-200 pb-6 text-sm font-medium">
+                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                     <input
                       type="text"
-                      name="username"
-                      id="username"
-                      autoComplete="username"
-                      className="block flex-1 border-0 rounded-md  py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 border-gray-900 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Ciudad, Categoría, Evento"
+                      autoComplete="off"
+                      className="block w-full flex-1 border-0 rounded-md py-1.5 pl-3 text-gray-900 placeholder-gray-500 focus:ring-0"
+                      placeholder="Buscar por nombre, ciudad o categoría"
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
                     />
                   </div>
-                </form>
+                </div>
 
                 {filters.map((section) => (
                   <Disclosure
@@ -207,7 +230,7 @@ export const CategoryFilters = () => {
                     {({ open }) => (
                       <>
                         <h3 className="-mx-2 -my-3 flow-root">
-                          <DisclosureButton className="flex w-full items-center justify-between  px-2 py-3 text-gray-400 hover:text-gray-500">
+                          <DisclosureButton className="flex w-full items-center justify-between px-2 py-3 text-gray-400 hover:text-gray-500">
                             <span className="font-medium text-gray-900">
                               {section.name}
                             </span>
@@ -238,8 +261,13 @@ export const CategoryFilters = () => {
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
                                   type="checkbox"
-                                  defaultChecked={option.checked}
-                                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                  checked={option.checked}
+                                  onChange={() =>
+                                    section.id === 'ciudad'
+                                      ? handleCiudadChange(option.value)
+                                      : handleCategoriaChange(option.value)
+                                  }
+                                  className="cursor-pointer h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
@@ -257,9 +285,9 @@ export const CategoryFilters = () => {
                 ))}
               </form>
 
-              {/* Product grid */}
-              <div className=" lg:col-span-5 overflow-y-auto h-96">
-                <CardCategory />
+              {/* Event Cards */}
+              <div className="lg:col-span-5">
+                <CardCategory eventos={filteredBySelection} />
               </div>
             </div>
           </section>
