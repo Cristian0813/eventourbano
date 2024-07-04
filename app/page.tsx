@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CardCategory } from '@/components/card/card';
 import { SkeletonSlider } from '@/components/skeleton/skeleton-slider';
 import { SkeletonCard } from '@/components/skeleton/skeleton-card';
 import { UseSlider } from '@/hook/useSleider';
-import SideBar from '@/components/sidebar/sidebar';
+import { CategoryFilters } from '@/components/filters/category-filters';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -18,20 +17,19 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-    if (isLoading) {
-      return (
-        <>
-          <SkeletonSlider />
-          <SkeletonCard />
-        </>
-      );
-    }
+  if (isLoading) {
+    return (
+      <>
+        <SkeletonSlider />
+        <SkeletonCard />
+      </>
+    );
+  }
 
   return (
     <div>
       <UseSlider />
-      <SideBar />
+      <CategoryFilters />
     </div>
   );
 }
-

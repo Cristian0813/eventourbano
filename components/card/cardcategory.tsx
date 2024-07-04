@@ -1,18 +1,14 @@
 import Image from 'next/image';
-import { useFetchEventos } from '@/hook/useFetchEventos';
-import SideBar from '../sidebar/sidebar';
+import { useFetchEventos } from '@/hook/useFetchCard';
 
 export const CardCategory = () => {
   const eventos = useFetchEventos();
 
   return (
     <>
-      <div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-4">
           <div className="mx-auto max-w-2xl py-2 sm:py-2 lg:max-w-none">
-{/*             <h1 className="text-2xl font-bold text-gray-900">Eventos</h1> */}
-
-            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-2">
               {eventos.map((evento) => (
                 <div
                   key={evento.id}
@@ -40,7 +36,6 @@ export const CardCategory = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

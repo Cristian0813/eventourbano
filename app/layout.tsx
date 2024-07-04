@@ -8,7 +8,7 @@ import Footer from '@/components/footer/page';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Urban Event',
+  title: 'Evento Urbano',
   description: 'Aquí encontraras toda clase de eventos.',
 };
 

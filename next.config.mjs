@@ -14,6 +14,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: '2-tuticket-com-co.my-uploads.ticketplus.global',
+        pathname: '/themes/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'tuboleta.com',
         pathname: '/imagenes/**',
       },

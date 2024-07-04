@@ -1,4 +1,5 @@
-// useFetchEventos.ts
+// FETCH DE CARDCATEGORY
+
 import { useEffect, useState } from 'react';
 
 interface UseFetchEvento {
@@ -11,7 +12,6 @@ interface UseFetchEvento {
   url: string;
   categoria: string;
 }
-
 export const useFetchEventos = () => {
   const [eventos, setEventos] = useState<UseFetchEvento[]>([]);
 
@@ -34,3 +34,4 @@ export const useFetchEventos = () => {
 
   return eventos;
 };
+

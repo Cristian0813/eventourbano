@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function apiEventos(req: NextApiRequest, res: NextApiResponse) {
   const eventos = [
     {
       id: 1,
@@ -37,8 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     },
     {
       id: 4,
-      nombre:
-        'Titanes vs Bucaros | Liga de baloncesto profesional 2024-1',
+      nombre: 'Titanes vs Bucaros | Liga de baloncesto profesional 2024-1',
       imagen: 'https://tuboleta.com/imagenes/6675b00473b5a.webp',
       fecha: '02/Jul/2024',
       lugar: 'Coliseo Elías Chegwin',
@@ -68,8 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     },
     {
       id: 7,
-      nombre:
-        'Ryan Castro | El cantante del guetto Tour 2024 - Barranquilla',
+      nombre: 'Ryan Castro | El cantante del guetto Tour 2024 - Barranquilla',
       imagen: 'https://tuboleta.com/imagenes/666a059623cfc.webp',
       fecha: '13/Sep/2024',
       lugar: 'Puerta de Oro',
@@ -238,17 +236,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     {
       id: 24,
       nombre: 'Teatro en Familia: ECOCLOWN',
-      imagen: 'https://www.tuboleta.com/eventos/detalle/ecoclown/778215013065',
+      imagen: 'https://tuboleta.com/imagenes/6672f79b742e7.png',
       fecha: '14/Jul/2024',
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
-      url: 'https://tuboleta.com/imagenes/6672f79b742e7.png',
+      url: 'https://www.tuboleta.com/eventos/detalle/ecoclown/778215013065',
       categoria: 'Familia',
     },
     {
       id: 25,
       nombre: 'La Hoguera',
-      imagen: 'https://tuboleta.com/imagenes/6674270524f7d.web',
+      imagen: 'https://tuboleta.com/imagenes/6674270524f7d.webp',
       fecha: '17/Jul/2024',
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
@@ -303,7 +301,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro El Tesoro',
       ciudad: 'Medellín',
       url: 'https://portal.tuboleta.com/teatro-el-tesoro/',
-      categoria: 'Concierto',
+      categoria: 'Conciertos',
     },
     {
       id: 31,
@@ -378,8 +376,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     },
     {
       id: 38,
-      nombre:
-        'Alberto Plaza | Sin Fronteras Tour - Medellín Segunda fecha',
+      nombre: 'Alberto Plaza | Sin Fronteras Tour - Medellín Segunda fecha',
       imagen: 'https://tuboleta.com/imagenes/663948e0a5f5c.webp',
       fecha: '14/Sep/2024',
       lugar: 'Teatro de la UniversIdad de Medellín',
@@ -427,7 +424,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lugar: 'Teatro Pablo Tobón Uribe',
       ciudad: 'Medellín',
       url: 'https://www.tuboleta.com/eventos/detalle/kiss-guns-and-roses-def-leppard-sinfonico/7423379111',
-      categoria: 'Concierto',
+      categoria: 'Conciertos',
     },
     {
       id: 43,
