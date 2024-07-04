@@ -41,7 +41,7 @@ export const CardCategory: React.FC<CardCategoryProps> = ({ eventos }) => {
                     {evento.nombre}
                   </a>
                 </h2>
-                <p className="text-sm font-semibold text-gray-900">
+                <p className="text-lg font-semibold text-indigo-600">
                   {evento.fecha}
                 </p>
               </div>

@@ -40,6 +40,7 @@ export const CategoryFilters = () => {
         : [...prev, categoria]
     );
   };
+  
 
 const filteredBySelection = filteredCategorias.filter(
   (evento) =>
@@ -104,8 +105,8 @@ const filteredBySelection = filteredCategorias.filter(
                       name="search"
                       id="search"
                       autoComplete="off"
-                      className="block w-full flex-1 border-0 rounded-md py-1.5 pl-3 text-gray-900 placeholder-gray-500 focus:ring-0"
-                      placeholder="Ciudad, Categoría, Evento"
+                      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      placeholder="Buscar por Nombre, Ciudad, Categoría"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                     />
@@ -180,7 +181,7 @@ const filteredBySelection = filteredCategorias.filter(
         </Dialog>
 
         {/* Filters */}
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <main className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
               Eventos
@@ -209,12 +210,12 @@ const filteredBySelection = filteredCategorias.filter(
               <form className="hidden lg:block">
                 <h3 className="sr-only">Categorias</h3>
                 <div className="mt-2 space-y-4 border-b border-gray-200 pb-6 text-sm font-medium">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                  <div className="flex shadow-sm ">
                     <input
                       type="text"
                       autoComplete="off"
-                      className="block w-full flex-1 border-0 rounded-md py-1.5 pl-3 text-gray-900 placeholder-gray-500 focus:ring-0"
-                      placeholder="Buscar por nombre, ciudad o categoría"
+                      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      placeholder="Buscar por Nombre, Ciudad, Categoría"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                     />
@@ -286,7 +287,7 @@ const filteredBySelection = filteredCategorias.filter(
               </form>
 
               {/* Event Cards */}
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 overflow-y-auto h-96">
                 <CardCategory eventos={filteredBySelection} />
               </div>
             </div>
