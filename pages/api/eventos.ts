@@ -476,6 +476,235 @@ export default function apiEventos(req: NextApiRequest, res: NextApiResponse) {
       url: 'https://www.tuboleta.com/eventos/detalle/la-selva-colombia/1829475769',
       categoria: 'Familia',
     },
+    {
+      id: 48,
+      nombre: 'ABONO HINCHA FIEL ONCE CALDAS 2024-II',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Estadio Palogrande',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Deportes',
+    },
+    {
+      id: 49,
+      nombre: 'GORDO Y FEO - MANIZALES',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Auditorio de la Fundación Batuta Caldas',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Comedia',
+    },
+    {
+      id: 50,
+      nombre:
+        'LEYENDAS DEL VALLENATO 2.0 | JORGE CELEDON, HEBERT VARGAS, NELSON VELASQUEZ, ALEX MANGA, MIGUEL MORALES',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Plaza de Toros de Manizales',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Concierto',
+    },
+    {
+      id: 51,
+      nombre: '56° FESTIVAL INTERNACIONAL DE TEATRO DE MANIZALES',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Teatros de Manizales',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Festival',
+    },
+    {
+      id: 52,
+      nombre: 'YEISON JIMENEZ INVICTO TOUR 17 * 32 - MANIZALES',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Plaza de Toros',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Concierto',
+    },
+    {
+      id: 53,
+      nombre: 'RYAN CASTRO | EL CANTANTE DEL GHETTO TOUR 2024 - MANIZALES',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Plaza de Toros',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Concierto',
+    },
+    {
+      id: 54,
+      nombre: 'ONCE CALDAS',
+      imagen: '', // Si tienes una URL de la imagen, añádela aquí
+      lugar: 'Estadio Palogrande',
+      ciudad: 'Manizales',
+      url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+      categoria: 'Deportes',
+    },
+      {
+        id: 55,
+        nombre: 'TSUNAMI - IBAGUÉ',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'La Gallera',
+        ciudad: 'Ibagué',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 56,
+        nombre: 'TIQUETERAS TOLIMA 2024-2',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Estadio Manuel',
+        ciudad: 'Ibagué',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Deportes',
+      },
+      {
+        id: 57,
+        nombre: 'SABROSURA EL MUSICAL',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Centro Comercial La Serrezuela',
+        ciudad: 'Cartagena',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Musical',
+      },
+      {
+        id: 58,
+        nombre: 'EL LAGO DE LOS CISNES 2024 - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Municipal Enrique Buenaventura',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Ballet',
+      },
+      {
+        id: 59,
+        nombre: 'VOLVER | UN HOMENAJE A CARLOS GARDEL',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Jorge Isaacs',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 60,
+        nombre: 'SECUELAS: UNA COMEDIA ROMÁNTICA',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro la Concha',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Comedia',
+      },
+      {
+        id: 61,
+        nombre: 'FUCKS NEWS - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Calima',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Comedia',
+      },
+      {
+        id: 62,
+        nombre: 'GILBERTO SANTAROSA | AUTENTICO TOUR 2024 CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Arena Cañaveralejo',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 63,
+        nombre: 'EPIC - CALI - SEGUNDA FUNCIÓN',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Municipal Enrique Buenaventura',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Teatro',
+      },
+      {
+        id: 64,
+        nombre: 'EPIC - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Municipal Enrique Buenaventura',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Teatro',
+      },
+      {
+        id: 65,
+        nombre: 'VOCES A LA PLANCHA - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Jorge Isaacs',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 66,
+        nombre: 'ALBERTO PLAZA | SIN FRONTERAS TOUR - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro Calima',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 67,
+        nombre: 'RYAN CASTRO | EL CANTANTE DEL GHETTO TOUR 2024 - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Arena Cañaveralejo',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Concierto',
+      },
+      {
+        id: 68,
+        nombre: 'EL MUNDO SEGÚN MAFALDA - CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Centro Comercial Mall Plaza',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Exposición',
+      },
+      {
+        id: 69,
+        nombre: 'FUNDACIÓN ZOOLÓGICO DE CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Zoológico de Cali',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Zoológico',
+      },
+      {
+        id: 70,
+        nombre: 'AMÉRICA DE CALI - PASIÓN DE UN PUEBLO',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Estadio Francisco Rivera Escobar – Palmira',
+        ciudad: 'Palmira',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Deportes',
+      },
+      {
+        id: 71,
+        nombre: 'JARDÍN BOTÁNICO DE CALI',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Jardín Botánico de Cali',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Naturaleza',
+      },
+      {
+        id: 72,
+        nombre: 'TEATRO LA CONCHA',
+        imagen: '', // Si tienes una URL de la imagen, añádela aquí
+        lugar: 'Teatro La Concha',
+        ciudad: 'Cali',
+        url: 'URL_DE_COMPRA', // Reemplaza con la URL de compra
+        categoria: 'Teatro',
+      },
   ];
+ eventos.sort((a, b) => a.ciudad.localeCompare(b.ciudad));
+ eventos.sort((a, b) => a.categoria.localeCompare(b.categoria));
+
   res.status(200).json(eventos);
 }
